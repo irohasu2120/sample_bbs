@@ -22,10 +22,23 @@ cd backend
 ./gradlew clean build --console=verbose
 ```
 
-### Docker起動
+```shell
+./gradlew build --console=verbose
+```
+
 ```shell
 cd ../
 ```
+
+```shell
+cd frontend/front-app
+```
+
+```shell
+npm run build
+```
+
+### Docker起動
 ```shell
 docker compose up -d
 ```
@@ -33,4 +46,9 @@ docker compose up -d
 ### Dockerを停止したくなったら
 ```shell
 docker compose down
+```
+
+### ビルドしたJarを適用
+```shell
+docker compose restart app
 ```
