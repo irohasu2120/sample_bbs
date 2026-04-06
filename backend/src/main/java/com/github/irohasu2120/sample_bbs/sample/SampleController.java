@@ -1,13 +1,17 @@
 package com.github.irohasu2120.sample_bbs.sample;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class SampleController {
+    private final SampleService sampleService;
 
     @GetMapping("/hello")
     public String sampleGet() {
-        return "Hello World2!";
+        return sampleService.mainRoutine();
+//        return "Hello World2!";
     }
 }
