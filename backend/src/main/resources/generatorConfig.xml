@@ -1,0 +1,26 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "https://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- データベース接続設定 -->
+    <context id="MyTables" targetRuntime="MyBatis3DynamicSql">
+        <jdbcConnection
+                driverClass="com.mysql.cj.jdbc.Driver"
+                connectionURL="jdbc:mysql://mysql:3306/appdb?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Tokyo"
+                userId="app_user"
+                password="app_pass">
+        </jdbcConnection>
+        <!-- 生成されるファイルの設定 -->
+        <modelGenerator
+                targetPackage="com.github.irohasu2120.sample_bbs.db.domain"
+                targetProject="src/main/java" />
+        <!--  Mapper(java)の生成場所 -->
+        <clientGenerator
+                targetPackage="com.github.irohasu2120.sample_bbs.db.mapper"
+                targetProject="src/main/java/"
+                type="XMLMAPPER"
+        />
+        <!-- テーブル設定 -->
+        <table tableName="sample" />
+    </context>
+</generatorConfiguration>

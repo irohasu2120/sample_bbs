@@ -1,4 +1,4 @@
-package com.github.irohasu2120.sample_bbs.db.domain;
+package com.github.irohasu2120.sample_bbs.db.domain.dynamic;
 
 import lombok.Data;
 

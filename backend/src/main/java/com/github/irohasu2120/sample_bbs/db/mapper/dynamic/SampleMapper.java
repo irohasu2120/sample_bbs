@@ -1,6 +1,6 @@
-package com.github.irohasu2120.sample_bbs.db.mapper;
+package com.github.irohasu2120.sample_bbs.db.mapper.dynamic;
 
-import com.github.irohasu2120.sample_bbs.db.domain.Sample;
+import com.github.irohasu2120.sample_bbs.db.domain.dynamic.Sample;
 import org.apache.ibatis.annotations.Mapper;
 import org.mybatis.dynamic.sql.util.mybatis3.CommonCountMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.CommonDeleteMapper;

@@ -1,8 +1,8 @@
 package com.github.irohasu2120.sample_bbs.sample;
 
 
-import com.github.irohasu2120.sample_bbs.db.domain.SampleDSLSupport;
-import com.github.irohasu2120.sample_bbs.db.mapper.SampleMapper;
+import com.github.irohasu2120.sample_bbs.db.domain.dynamic.SampleDSLSupport;
+import com.github.irohasu2120.sample_bbs.db.mapper.dynamic.SampleMapper;
 import lombok.RequiredArgsConstructor;
 import org.mybatis.dynamic.sql.render.RenderingStrategies;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;

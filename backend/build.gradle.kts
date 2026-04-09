@@ -1,7 +1,13 @@
+import com.thinkimi.gradle.MybatisGeneratorExtension
+
+//import org.gradle.internal.impldep.org.apache.ivy.util.Message.verbose
+
 plugins {
 	java
 	id("org.springframework.boot") version "4.0.5"
 	id("io.spring.dependency-management") version "1.1.7"
+	// MyBatis Generator
+	id("com.thinkimi.gradle.MybatisGenerator") version "2.4"
 }
 
 group = "com.github.irohasu2120"
@@ -42,11 +48,28 @@ dependencies {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+//com.thinkimi.gradle.MybatisGeneratorExtension
+//buildscript {
+//	repositories {
+//		mavenCentral()
+//		gradlePluginPortal()
+//	}
+//	dependencies {
+//		classpath("gradle.plugin.com.thinkimi.gradle:mybatis-generator-plugin:2.4")
+//	}
+//}
+//apply(plugin = "com.thinkimi.gradle.MybatisGenerator")
+//mybatisGenerator {
+//	verbose = true
+//	configFile = file("generatorConfig.xml")
+//}
 //
 //tasks.register("mybatisGenerator") {
-//	doLast {
-//		org.mybatis.generator.api.ShellRunner.main(
+////	verbose = true;
 //
-//		)
-//	}
+//}
+//
+//myB
+//	configFi
+//
 //}
