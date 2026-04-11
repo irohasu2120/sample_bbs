@@ -1,6 +1,8 @@
 package com.github.irohasu2120.sample_bbs.sample;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +25,8 @@ public class SampleController {
     }
 
     @GetMapping("/hello2")
-    public String sample2Get() {
-        return "表示できる？";
+    public ResponseEntity<String> sample2Get(Authentication authentication) {
+        return ResponseEntity.ok()
+                .body("JWT認証OK！表示できてる！ user=" + authentication.getName());
     }
 }
