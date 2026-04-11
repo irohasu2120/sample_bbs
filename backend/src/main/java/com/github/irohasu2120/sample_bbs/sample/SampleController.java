@@ -21,4 +21,9 @@ public class SampleController {
         return sampleService.mainRoutine();
 //        return "Hello World2!";
     }
+
+    @GetMapping("/hello2")
+    public String sample2Get() {
+        return "表示できる？";
+    }
 }

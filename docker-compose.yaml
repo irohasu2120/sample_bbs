@@ -1,30 +1,32 @@
 services:
-  nginx:
-    image: nginx:stable
-    container_name: sample-nginx
-    ports:
-      - "80:80"
-    volumes:
-        # 後ろの「:ro」で読み取り専用にできる
-        - ./frontend/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-        - ./frontend/front-app/dist:/usr/share/nginx/html:ro
-    depends_on:
-      - app
-    networks:
-      - app-net
-
-  app:
-    build: ./backend
-    container_name: sample-app
-    volumes:
-      - ./backend/build/libs/sample_bbs-1.0.jar:/app/app.jar:ro
-    # 本番運用時はportsはコメントアウト
-    ports:
-      - "8080:8080"
-    depends_on:
-      - mysql
-    networks:
-      - app-net
+#  nginx:
+#    image: nginx:stable
+#    container_name: sample-nginx
+#    ports:
+#      - "80:80"
+#    volumes:
+#        # 後ろの「:ro」で読み取り専用にできる
+#        - ./frontend/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+#        - ./frontend/front-app/dist:/usr/share/nginx/html:ro
+#    depends_on:
+#      - app
+#    networks:
+#      - app-net
+#
+#  app:
+#    build: ./backend
+#    container_name: sample-app
+#    environment:
+#      SPRING_PROFILES_ACTIVE: prod
+#    volumes:
+#      - ./backend/build/libs/sample_bbs-1.0.jar:/app/app.jar:ro
+#    # 本番運用時はportsはコメントアウト
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - mysql
+#    networks:
+#      - app-net
 
   mysql:
     image: mysql:9.6.0
